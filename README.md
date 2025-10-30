@@ -29,6 +29,8 @@
 - **Method:** Isolated HTTP streams → copied bytes between **JPG header/footer** → saved via HxD.  
 - **Result:** Both images successfully regenerated.
 
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/4650216b-65c0-4e2a-bfbb-611703a3a0b2" />
+![Untitled3](https://github.com/user-attachments/assets/be6a8ab1-730f-43ac-bc41-89a220fec910)
 
 
 ### Sub-task 2
