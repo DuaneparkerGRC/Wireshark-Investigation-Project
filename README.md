@@ -108,9 +108,23 @@
 ---
 
 ## Screenshots (add your images)
+<!-- Screenshot 1 -->
+<figure>
+  <img width="2560" height="1440" alt="Screenshot 2025-10-30 132151"
+       src="https://github.com/user-attachments/assets/7ae0dd56-f72a-42cb-aafb-01b5c5e1161e" />
+  <figcaption><em>Placeholder caption:</em> Briefly describe what this screenshot shows and why it matters.</figcaption>
+</figure>
 
-<img width="2560" height="1440" alt="Screenshot 2025-10-30 132151" src="https://github.com/user-attachments/assets/7ae0dd56-f72a-42cb-aafb-01b5c5e1161e" />
+<!-- Screenshot 2 -->
+<figure>
+  <img width="2560" height="1440" alt="Screenshot 2025-10-30 132131"
+       src="https://github.com/user-attachments/assets/57d0ca79-6d17-4d8c-92b1-7e41f488f929" />
+  <figcaption><em>Placeholder caption:</em> Explain the key action, setting, or finding visible here.</figcaption>
+</figure>
 
-<img width="2560" height="1440" alt="Screenshot 2025-10-30 132131" src="https://github.com/user-attachments/assets/57d0ca79-6d17-4d8c-92b1-7e41f488f929" />
-
-<img width="2560" height="1440" alt="Screenshot 2025-10-30 132549" src="https://github.com/user-attachments/assets/63c46886-d87a-4170-a196-6a2f81621268" />
+<!-- Screenshot 3 -->
+<figure>
+  <img width="2560" height="1440" alt="Screenshot 2025-10-30 132549"
+       src="https://github.com/user-attachments/assets/63c46886-d87a-4170-a196-6a2f81621268" />
+  <figcaption><em>Placeholder caption:</em> Summarize the outcome or result demonstrated in this screenshot.</figcaption>
+</figure>
