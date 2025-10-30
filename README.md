@@ -112,16 +112,16 @@
 <figure>
   <img width="1280" height="720" alt="Screenshot 2025-10-30 132151"
        src="https://github.com/user-attachments/assets/7ae0dd56-f72a-42cb-aafb-01b5c5e1161e" />
-  <figcaption><em>Wireshark:</em> search fir http data and TCP flow data.</figcaption>
+  <figcaption><em>Wireshark:</em> search for http data and TCP flow data.</figcaption>
 </figure>
-
+---
 <!-- Screenshot 2 -->
 <figure>
   <img width="1280" height="720" alt="Screenshot 2025-10-30 132131"
        src="https://github.com/user-attachments/assets/57d0ca79-6d17-4d8c-92b1-7e41f488f929" />
   <figcaption><em>View of Raw Data:</em> Extracting Raw Jpeg Data.</figcaption>
 </figure>
-
+---
 <!-- Screenshot 3 -->
 <figure>
   <img width="1280" height="720" alt="Screenshot 2025-10-30 132549"
