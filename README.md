@@ -91,7 +91,7 @@
  
 <img width="275.4" height="348.2" alt="fix6" src="https://github.com/user-attachments/assets/2240a728-3b3c-4617-93e3-4c440139f5fe" />
 
-<img width="175.4" height="248.2" alt="fix2" src="https://github.com/user-attachments/assets/f20f6bb0-0e19-4bc5-8bea-34167e32c25a" />
+<img width="275.4" height="348.2" alt="fix2" src="https://github.com/user-attachments/assets/f20f6bb0-0e19-4bc5-8bea-34167e32c25a" />
 
 
 ### Sub-task 3
