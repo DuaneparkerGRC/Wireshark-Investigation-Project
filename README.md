@@ -1,4 +1,4 @@
-# Network Forensics Challenge — PCAP Artifact Recovery (Wireshark + HxD)
+# Network Forensics Challenge - PCAP Artifact Recovery (Wireshark + HxD)
 
 **Context:** This was **1 of 7 interesting, hands-on projects** I completed on an online platform.  
 **Goal:** Investigate an incident from a provided **Wireshark PCAP**, isolate HTTP/TCP streams, extract **raw objects**, and rebuild files in **HxD Hex Editor**.  
