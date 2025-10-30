@@ -68,7 +68,7 @@
 - **Method:** Stream was **not plain text**; hex showed a **JPG signature**.  
 - **Result:** The “TXT” was actually an **image**; carved as JPEG and recovered.
 
-<img width="1280" height="720" alt="fix3" src="https://github.com/user-attachments/assets/b5dfac2c-ff6f-43e1-b1cc-cfa4ccdbd3a8" />
+<img width="640" height="360" alt="fix3" src="https://github.com/user-attachments/assets/b5dfac2c-ff6f-43e1-b1cc-cfa4ccdbd3a8" />
 
 
 
