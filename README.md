@@ -15,7 +15,7 @@
 ---
 
 ## Approach (short)
-1. Open PCAP wit hWirehsark → filter HTTP/interesting traffic → **Follow TCP Stream**.  **Download PCAP:** [Click here](https://github.com/DuaneparkerGRC/Wireshark-Investigation-Project/raw/de4e51e97b07c4c2494d1f442adb7311fc5b307f/Digital_Investigation%20Task%20%28pcap%20file%29%20%281%29.pcapng)
+1. Open PCAP with Wirehsark → filter HTTP/interesting traffic → **Follow TCP Stream**.  **Download PCAP:** [Click here](https://github.com/DuaneparkerGRC/Wireshark-Investigation-Project/raw/de4e51e97b07c4c2494d1f442adb7311fc5b307f/Digital_Investigation%20Task%20%28pcap%20file%29%20%281%29.pcapng)
 2. Identify **magic bytes** / headers & footers from TCP flow (e.g., JPEG `FF D8 … FF D9`, PDF `%PDF` → `25 50 44 46`, PNG `89 50 4E 47`, ZIP `50 4B 03 04`).  
 3. **Copy raw bytes** of each object → **HxD** → save with correct extension.  
 4. For odd cases: check **ASCII/Base64**, or look for **embedded/second signatures** in the same stream.
