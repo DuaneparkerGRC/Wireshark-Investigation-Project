@@ -99,6 +99,7 @@
 - **Method:** Stream contained readable **ASCII**; did not need raw carve.  
 - **Recovered text:** “**Step 1: Find target  Step 2: Hack them  This is a suspicious document**”.
 
+- Step 1: Find target Step 2: Hack them This is a suspicious document
 
 
 ### Sub-task 4
