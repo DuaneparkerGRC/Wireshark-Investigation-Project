@@ -15,10 +15,59 @@
 ---
 
 ## Approach (short)
-1. Open PCAP → filter HTTP/interesting traffic → **Follow TCP Stream**.  
+1. Open PCAP → filter HTTP/interesting traffic → **Follow TCP Stream**.  **Download PCAP:** [Click here](https://github.com/DuaneparkerGRC/Wireshark-Investigation-Project/raw/de4e51e97b07c4c2494d1f442adb7311fc5b307f/Digital_Investigation%20Task%20%28pcap%20file%29%20%281%29.pcapng)
 2. Identify **magic bytes** / headers & footers (e.g., JPEG `FF D8 … FF D9`, PDF `%PDF` → `25 50 44 46`, PNG `89 50 4E 47`, ZIP `50 4B 03 04`).  
 3. **Copy raw bytes** of each object → **HxD** → save with correct extension.  
 4. For odd cases: check **ASCII/Base64**, or look for **embedded/second signatures** in the same stream.
+
+
+### Common file signatures (Cheat Sheet)
+
+| Format | Hex (first bytes) | ASCII | Notes |
+|---|---|---|---|
+| JPEG | FF D8 FF | ... | Starts with SOI `FFD8` then marker (`FFEx`/`FFE1` etc.). Ends `FF D9`. |
+| PNG | 89 50 4E 47 0D 0A 1A 0A | .PNG.... | Fixed 8-byte PNG signature. |
+| GIF87a | 47 49 46 38 37 61 | GIF87a | Legacy GIF. |
+| GIF89a | 47 49 46 38 39 61 | GIF89a | Common GIF. |
+| BMP | 42 4D | BM | Windows bitmap. |
+| TIFF (LE) | 49 49 2A 00 | II*. | Little-endian TIFF. |
+| TIFF (BE) | 4D 4D 00 2A | MM.* | Big-endian TIFF. |
+| ICO | 00 00 01 00 | .... | Windows icon (CUR is `00 00 02 00`). |
+| WEBP | 52 49 46 46 **.. .. .. ..** 57 45 42 50 | RIFF....WEBP | RIFF container; `WEBP` at offset 8. |
+| PDF | 25 50 44 46 2D | %PDF- | Header like `%PDF-1.7`. |
+| ZIP | 50 4B 03 04 | PK.. | Local file header. Also `50 4B 05 06` (empty) or `50 4B 07 08`. |
+| 7z | 37 7A BC AF 27 1C | 7z..'. | 7-Zip container. |
+| RAR v1.5–4.x | 52 61 72 21 1A 07 00 | Rar!... | Legacy RAR. |
+| RAR v5 | 52 61 72 21 1A 07 01 00 | Rar!... | New RAR5. |
+| GZIP | 1F 8B 08 | ... | Deflate method = `08`. |
+| BZIP2 | 42 5A 68 | BZh | Next byte is version (31–39). |
+| XZ | FD 37 7A 58 5A 00 | .7zXZ. | xz stream. |
+| TAR (ustar) | 75 73 74 61 72 00 | ustar. | At **offset 257**, not the start. |
+| ISO 9660 | 43 44 30 30 31 | CD001 | At **offset 0x8001** (and 0x8801, 0x9001). |
+| ELF | 7F 45 4C 46 | .ELF | Linux/UNIX executables. Class/endian follow. |
+| Mach-O (thin) | CF FA ED FE | .... | 32-bit big-endian; other combos: `CE FA ED FE`, `FE ED FA CE/CF`. |
+| Mach-O (fat) | CA FE BA BE | .... | Universal/fat binary (also `CA FE BA BF` for 64-bit header). |
+| PE (EXE/DLL) | 4D 5A | MZ | DOS stub; `50 45 00 00` (“PE\0\0”) at offset from `e_lfanew`. |
+| Java Class | CA FE BA BE | .... | Followed by version. |
+| .NET (CLI) | 4D 5A | MZ | PE with CLI metadata; look for `BSJB`/`CLR` metadata after PE headers. |
+| SQLite | 53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00 | SQLite format 3\0 | Exact 16-byte header. |
+| XML | 3C 3F 78 6D 6C 20 | <?xml | May begin with UTF BOM; not a strict signature. |
+| HTML | 3C 21 44 4F 43 54 59 50 45 | <!DOCTYPE | Also may start with `<html` etc. |
+| JSON | 7B or 5B | { or [ | No formal magic; whitespace/BOM may precede. |
+| MP3 (ID3) | 49 44 33 | ID3 | If no ID3 tag, frames start `FF FB` / `FF F3` / `FF F2`. |
+| AAC (ADTS) | FF F1 or FF F9 | .. | Syncword `FFF`, MPEG-2/4 profile bits set. |
+| WAV | 52 49 46 46 **.. .. .. ..** 57 41 56 45 | RIFF....WAVE | RIFF container; `WAVE` at offset 8. |
+| AVI | 52 49 46 46 **.. .. .. ..** 41 56 49 20 | RIFF....AVI | RIFF container; `AVI ` at offset 8. |
+| MP4 / M4V / MOV | **.. .. .. ..** 66 74 79 70 | ....ftyp | `ftyp` at **offset 4**; brand e.g., `isom`, `mp42`, `qt  `. |
+| MKV / WebM | 1A 45 DF A3 | .... | EBML header; DocType `matroska`/`webm` later. |
+| OGG | 4F 67 67 53 | OggS | Ogg container (Vorbis/Opus/Theora, etc.). |
+| FLAC | 66 4C 61 43 | fLaC | FLAC stream. |
+| PNG ICO (ICNS) | 69 63 6E 73 | icns | macOS icon. |
+| PSD | 38 42 50 53 | 8BPS | Adobe Photoshop. |
+| RTF | 7B 5C 72 74 66 31 | {\rtf1 | Rich Text Format. |
+| OLE (DOC/XLS/PPT) | D0 CF 11 E0 A1 B1 1A E1 | ....... | Compound File Binary (Office 97–2003). |
+| OOXML (DOCX/XLSX/PPTX) | 50 4B 03 04 | PK.. | It’s ZIP with specific directories (`word/`, `xl/`, `ppt/`). |
+| APK/IPA/JAR | 50 4B 03 04 | PK.. | ZIP containers with platform-specific structure. |
 
 ---
 
