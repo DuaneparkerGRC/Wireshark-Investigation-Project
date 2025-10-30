@@ -29,6 +29,8 @@
 - **Method:** Isolated HTTP streams → copied bytes between **JPG header/footer** → saved via HxD.  
 - **Result:** Both images successfully regenerated.
 
+
+
 ### Sub-task 2
 - **Prompt:** Extract `ANZ1.jpg` and `ANZ2.jpg` and note what’s different.  
 - **Method:** Same carve process as Sub-task 1.  
@@ -41,7 +43,10 @@
 - **Method:** Stream contained readable **ASCII**; did not need raw carve.  
 - **Recovered text:** “**Step 1: Find target  Step 2: Hack them  This is a suspicious document**”.
 
+
+
 ### Sub-task 4
+
 - **Prompt:** Extract and view PDFs: `ANZ_Document.pdf`, `ANZ_Document2.pdf`, `evil.pdf`.  
 - **Method:** Found **`%PDF` (25 50 44 46)** in streams → copied from header through EOF → saved in HxD.  
 - **Result:** All three PDFs opened successfully.
@@ -80,8 +85,9 @@
 ## Screenshots (add your images)
 > Replace the placeholders with your own captures.
 
-- ![Wireshark filtering & TCP Stream](screenshots/wireshark_stream.png)  
-- ![HxD carving a JPEG between FF D8 … FF D9](screenshots/hxd_carve_jpg.png)  
-- ![Recovered images & PDFs](screenshots/recovered_artifacts.png)
+- ![Wireshark filtering & TCP Stream](<img width="2560" height="1440" alt="Screenshot 2025-10-30 132151" src="https://github.com/user-attachments/assets/51813d43-58a7-4e33-ab66-a61e5c05a51c" />
+)  
+- ![HxD carving a JPEG between FF D8 … FF D9](<img width="2560" height="1440" alt="Screenshot 2025-10-30 132131" src="https://github.com/user-attachments/assets/a915a0c9-e53e-423b-af13-667dc8148220" />)  
+- ![Recovered images & PDFs](<img width="2560" height="1440" alt="Screenshot 2025-10-30 132549" src="https://github.com/user-attachments/assets/2e1d11b1-e99d-4746-96d9-519cee0e8b68" />)
 
 ---
