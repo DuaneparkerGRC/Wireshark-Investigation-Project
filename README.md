@@ -153,7 +153,7 @@
 
 ---
 
-## Screenshots (add your images)
+## Screenshots
 <!-- Screenshot 1 -->
 <figure>
   <img width="1280" height="720" alt="Screenshot 2025-10-30 132151"
