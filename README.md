@@ -29,9 +29,9 @@
 - **Method:** Isolated HTTP streams → copied bytes between **JPG header/footer** → saved via HxD.  
 - **Result:** Both images successfully regenerated.
 
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/4650216b-65c0-4e2a-bfbb-611703a3a0b2" />
-![Untitled3](https://github.com/user-attachments/assets/be6a8ab1-730f-43ac-bc41-89a220fec910)
+<img width="225" height="225" alt="fix1" src="https://github.com/user-attachments/assets/f53e53db-758a-41e3-b315-d06bf28b95ee" />
 
+<img width="283" height="178" alt="fix7" src="https://github.com/user-attachments/assets/ffdb4fc2-2405-49eb-b268-09648018dead" />
 
 ### Sub-task 2
 - **Prompt:** Extract `ANZ1.jpg` and `ANZ2.jpg` and note what’s different.  
@@ -39,6 +39,11 @@
 - **Finding:** **Hidden messages appended after the image end marker** in both streams.  
   - `ANZ1.jpg`: “**You've found a hidden message in this file! Include it in your write-up.**”  
   - `ANZ2.jpg`: “**You've found the hidden message! Images are sometimes more than they appear.**”
+ 
+<img width="1754" height="2482" alt="fix6" src="https://github.com/user-attachments/assets/2240a728-3b3c-4617-93e3-4c440139f5fe" />
+
+<img width="1754" height="2482" alt="fix2" src="https://github.com/user-attachments/assets/f20f6bb0-0e19-4bc5-8bea-34167e32c25a" />
+
 
 ### Sub-task 3
 - **Prompt:** Recover contents of `how-to-commit-crimes.docx`.  
@@ -53,20 +58,38 @@
 - **Method:** Found **`%PDF` (25 50 44 46)** in streams → copied from header through EOF → saved in HxD.  
 - **Result:** All three PDFs opened successfully.
 
+[pdf3.pdf](https://github.com/user-attachments/files/23226302/pdf3.pdf)
+[pdf2.pdf](https://github.com/user-attachments/files/23226301/pdf2.pdf)
+[pdf1.pdf](https://github.com/user-attachments/files/23226298/pdf1.pdf)
+
+
 ### Sub-task 5
 - **Prompt:** Find contents of `hiddenmessage2.txt`.  
 - **Method:** Stream was **not plain text**; hex showed a **JPG signature**.  
 - **Result:** The “TXT” was actually an **image**; carved as JPEG and recovered.
+
+<img width="1280" height="720" alt="fix3" src="https://github.com/user-attachments/assets/b5dfac2c-ff6f-43e1-b1cc-cfa4ccdbd3a8" />
+
+
 
 ### Sub-task 6
 - **Prompt:** Investigate `atm-image.jpg` and explain what’s different.  
 - **Method:** TCP stream contained **two JPEG signatures** (two images in one flow).  
 - **Result:** Carved **two separate images** from the same stream.
 
+<img width="275" height="183" alt="fix5" src="https://github.com/user-attachments/assets/ff183847-eaa9-4eb7-86d9-82c7391c298d" />
+
+<img width="266" height="190" alt="fix4" src="https://github.com/user-attachments/assets/2990e4ef-b747-4728-b1fb-9c97a60956a0" />
+
 ### Sub-task 7
+
 - **Prompt:** Extract `broken.png`.  
 - **Method:** No PNG header in hex; **ASCII view showed Base64**.  
 - **Result:** Decoded Base64 and saved as PNG successfully.
+
+
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/e87411f4-2c5a-46f5-8c38-4cf340dd007c" />
+
 
 ### Sub-task 8
 - **Prompt:** Access `securepdf.pdf` and include it; detail steps.  
@@ -85,11 +108,9 @@
 ---
 
 ## Screenshots (add your images)
-> Replace the placeholders with your own captures.
 
-- ![Wireshark filtering & TCP Stream](<img width="2560" height="1440" alt="Screenshot 2025-10-30 132151" src="https://github.com/user-attachments/assets/51813d43-58a7-4e33-ab66-a61e5c05a51c" />
-)  
-- ![HxD carving a JPEG between FF D8 … FF D9](<img width="2560" height="1440" alt="Screenshot 2025-10-30 132131" src="https://github.com/user-attachments/assets/a915a0c9-e53e-423b-af13-667dc8148220" />)  
-- ![Recovered images & PDFs](<img width="2560" height="1440" alt="Screenshot 2025-10-30 132549" src="https://github.com/user-attachments/assets/2e1d11b1-e99d-4746-96d9-519cee0e8b68" />)
+<img width="2560" height="1440" alt="Screenshot 2025-10-30 132151" src="https://github.com/user-attachments/assets/7ae0dd56-f72a-42cb-aafb-01b5c5e1161e" />
 
----
+<img width="2560" height="1440" alt="Screenshot 2025-10-30 132131" src="https://github.com/user-attachments/assets/57d0ca79-6d17-4d8c-92b1-7e41f488f929" />
+
+<img width="2560" height="1440" alt="Screenshot 2025-10-30 132549" src="https://github.com/user-attachments/assets/63c46886-d87a-4170-a196-6a2f81621268" />
