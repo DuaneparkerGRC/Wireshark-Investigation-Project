@@ -40,9 +40,9 @@
   - `ANZ1.jpg`: “**You've found a hidden message in this file! Include it in your write-up.**”  
   - `ANZ2.jpg`: “**You've found the hidden message! Images are sometimes more than they appear.**”
  
-<img width="1754/3" height="2482/3" alt="fix6" src="https://github.com/user-attachments/assets/2240a728-3b3c-4617-93e3-4c440139f5fe" />
+<img width="175.4" height="248.2" alt="fix6" src="https://github.com/user-attachments/assets/2240a728-3b3c-4617-93e3-4c440139f5fe" />
 
-<img width="1754" height="2482" alt="fix2" src="https://github.com/user-attachments/assets/f20f6bb0-0e19-4bc5-8bea-34167e32c25a" />
+<img width="175.4" height="248.2" alt="fix2" src="https://github.com/user-attachments/assets/f20f6bb0-0e19-4bc5-8bea-34167e32c25a" />
 
 
 ### Sub-task 3
