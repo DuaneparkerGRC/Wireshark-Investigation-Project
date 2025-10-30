@@ -89,7 +89,7 @@
   - `ANZ1.jpg`: “**You've found a hidden message in this file! Include it in your write-up.**”  
   - `ANZ2.jpg`: “**You've found the hidden message! Images are sometimes more than they appear.**”
  
-<img width="175.4" height="248.2" alt="fix6" src="https://github.com/user-attachments/assets/2240a728-3b3c-4617-93e3-4c440139f5fe" />
+<img width="275.4" height="348.2" alt="fix6" src="https://github.com/user-attachments/assets/2240a728-3b3c-4617-93e3-4c440139f5fe" />
 
 <img width="175.4" height="248.2" alt="fix2" src="https://github.com/user-attachments/assets/f20f6bb0-0e19-4bc5-8bea-34167e32c25a" />
 
@@ -98,9 +98,6 @@
 - **Prompt:** Recover contents of `how-to-commit-crimes.docx`.  
 - **Method:** Stream contained readable **ASCII**; did not need raw carve.  
 - **Recovered text:** “**Step 1: Find target  Step 2: Hack them  This is a suspicious document**”.
-
-- Step 1: Find target Step 2: Hack them This is a suspicious document
-
 
 ### Sub-task 4
 
@@ -119,7 +116,6 @@
 - **Result:** The “TXT” was actually an **image**; carved as JPEG and recovered.
 
 <img width="640" height="360" alt="fix3" src="https://github.com/user-attachments/assets/b5dfac2c-ff6f-43e1-b1cc-cfa4ccdbd3a8" />
-
 
 
 ### Sub-task 6
